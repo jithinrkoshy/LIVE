@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WEB</title>
+
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
+type="text/javascript"></script>
+
+<style type="text/css">
+@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+#feedControl {
+margin-top : 10px;
+margin-left: auto;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
+</style>
+<script type="text/javascript">
+function load() {
+var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
+new GFdynamicFeedControl(feed, "feedControl");
+
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
+</head>
+<style>
+.mySlides {display:none;}
+.bg1 {color:#000!important;background-color:#F8C471!important;}
+.bg2 {background-color: #F8C471;}
+.w3-display-r{position:absolute;top:3%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3-display-r1{position:absolute;top:3%;right:5%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.cpos {position:relative; top:50px; left:400px;  }
+.cpos2{
+
+      position: absolute;
+       left:0px;
+      top:350px; 
+      width:100%;
+      height:60%; 
+    
+      
+}
+.cpos3 { 
+          height: 94.3%;
+  width: 20%;
+  position: fixed;
+ 
+  top: 2px;
+  
+  
+  margin-top: 37px;
+  
+        }
+.cpos4 {
+
+background-image: url(imgbg.jpg);
+
+
+}
+.main{
+
+position:fixed;
+left:260px;
+top:39px;
+width:1039px;
+height:599px;
+background-color: white;
+overflow-y: scroll;
+}
+a:hover {
+  background-color: #FFF7A0;
+  background-color: white;
+  width:100%;
+  height:100%;
+}
+
+</style>
+<body class="bg1">
+<header>
+<nav class="w3-bar w3-black">
+
+<a href="www.google.co.in" class="w3-bar-item w3-button">GOOGLE NEWS</a>
+<a href="www.msn.com" class="w3-bar-item w3-button">FACEBOOK</a>
+<a href="www.facebook.com" class="w3-bar-item w3-button">TWITTER</a>
+<a href="signin.html" class="w3-bar-item w3-button w3-display-r">login</a>
+<a href="signin.html" class="w3-bar-item w3-button w3-display-r1">signup</a>
+</nav>
+</header>
+
+<div class="main">
+<h1>hello</h1><br />
+<p>
+hello 
+<br />
+hello 
+<br />
+hello 
+<br />
+hello 
+<br />
+hello 
+<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />
+hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />hello<br />
+
+</p>
+</div>
+
+<div style="position:relative; width:100%; height: 100%;">
+
+<div class="cpos3" align="left">
+<div style=" width:100%; height:350px; background-color:white;border-bottom:solid;">
+<img src="icon.jpg" style="width:20%">
+<h4 style="position:absolute;top:0px;left:60px;font-family:Verdana Bold;font-size:120%;"><u>NEWS HEADLINES</u></h4>
+<div id="body">
+<div id="feedControl">Loading...</div>
+</div>
+</div>
+<div>
+<div class="cpos2 cpos4">
+<h4 style="text-align:center;font-family:Verdana Bold;">GALLERY</h4>
+<div class="w3-content w3-display-container w3-display-middle" style="position:absolute;top:130px;">
+  <img class="mySlides" src="name1.JPG" style="width:100%">
+  <img class="mySlides" src="name2.JPG" style="width:100%">
+  <img class="mySlides" src="name3.JPG" style="width:100%">
+ <div style="position:absolute;left:140px;top:20px;"> <a href="#" id="my-link" onclick="carousel()"><img src="img.png" style="width:30px;height:30px;">
+</a></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+ setTimeout(carousel, 8000); 
+
+}
+</script>
+
+</body>
+</html>
